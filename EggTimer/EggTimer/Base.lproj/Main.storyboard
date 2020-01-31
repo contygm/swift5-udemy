@@ -120,6 +120,21 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="571.5" width="374" height="246.5"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-Rw-FXy">
+                                                <rect key="frame" x="20" y="119.5" width="354" height="6"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="huW-Yk-reR"/>
+                                                </constraints>
+                                                <color key="progressTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="trackTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </progressView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="dg5-Rw-FXy" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="M2H-vD-d1X"/>
+                                            <constraint firstItem="dg5-Rw-FXy" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" constant="20" symbolic="YES" id="bXu-bz-09Z"/>
+                                            <constraint firstAttribute="trailing" secondItem="dg5-Rw-FXy" secondAttribute="trailing" id="dZ7-Kd-wul"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -133,6 +148,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="progressBar" destination="dg5-Rw-FXy" id="PXm-rr-mil"/>
+                        <outlet property="titleLabel" destination="XLm-5r-pSP" id="28S-6D-Jxk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
